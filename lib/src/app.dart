@@ -6,6 +6,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Log me in!',
       home: Scaffold(
+        backgroundColor: Colors.orange[100],
         body: LoginScreen(),
       ),
     );

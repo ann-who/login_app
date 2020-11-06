@@ -10,12 +10,15 @@ class LoginScreen extends StatefulWidget {
 class LoginScreenState extends State<LoginScreen> {
   Widget build(context) {
     return Container(
-      margin: EdgeInsets.all(20.0),
+      margin: EdgeInsets.all(80.0),
       child: Form(
         child: Column(
           children: [
             emailField(),
             passwordField(),
+            Container(
+              margin: EdgeInsets.only(top: 25.0),
+            ),
             submitButton(),
           ],
         ),
@@ -28,7 +31,18 @@ class LoginScreenState extends State<LoginScreen> {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         labelText: 'Email Address',
+        labelStyle: TextStyle(
+          color: Colors.deepOrange[900],
+        ),
         hintText: 'you@example.com',
+        hintStyle: TextStyle(
+          color: Colors.deepOrange[300],
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.deepOrange[900],
+          ),
+        ),
       ),
     );
   }
@@ -38,13 +52,25 @@ class LoginScreenState extends State<LoginScreen> {
       obscureText: true,
       decoration: InputDecoration(
         labelText: 'Password',
+        labelStyle: TextStyle(
+          color: Colors.deepOrange[900],
+        ),
         hintText: 'Password',
+        hintStyle: TextStyle(
+          color: Colors.deepOrange[300],
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.deepOrange[900],
+          ),
+        ),
       ),
     );
   }
 
   Widget submitButton() {
     return RaisedButton(
+      color: Colors.pink[50],
       onPressed: () {},
       child: Text('Submit'),
     );
